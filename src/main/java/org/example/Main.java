@@ -16,7 +16,7 @@ public class Main {
 
         while (true) {
             Event.displayAvailableEvent();
-            System.out.print("Enter your name (or type 'q' to quit): ");
+            System.out.print("Enter username (type 'q' to quit): ");
             String userName = scanner.nextLine();
             if (userName.equalsIgnoreCase("q")) break;
 

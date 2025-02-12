@@ -5,18 +5,16 @@ import java.util.UUID;
 
 public class Ticket {
     private final String ticketID;
-    private int ticketStock;
     private int seatNumber;
     private double ticketPrice;
     private String eventName;
     private boolean isTicketBooked;
     private User user;
 
-    public Ticket(String eventName,double ticketPrice, int seatNumber, int ticketStock){
+    public Ticket(String eventName,double ticketPrice, int seatNumber){
         this.ticketID = UUID.randomUUID().toString();
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
-        this.ticketStock = ticketStock;
         this.seatNumber = seatNumber;
         this.isTicketBooked = false;
     }

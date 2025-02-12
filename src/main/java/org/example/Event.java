@@ -17,7 +17,7 @@ public class Event {
         availableTicketList.put(eventName.toUpperCase(), ticketStock);
 
         for (int i = 0; i < ticketStock; i++) {
-            this.ticket.add(new Ticket(this.eventName, this.ticketPrice, i + 1, ticketStock));
+            this.ticket.add(new Ticket(this.eventName, this.ticketPrice, i + 1));
         }
 
     }
@@ -37,7 +37,7 @@ public class Event {
     public static void displayAvailableEvent(){
         System.out.println("Available Events:");
         for (String event : availableTicketList.keySet()) {
-            System.out.println(event + " - Tickets left: " + availableTicketList.get(event));
+            System.out.println(event + " - Tickets available: " + availableTicketList.get(event));
         }
     }
 

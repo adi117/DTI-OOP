@@ -12,10 +12,6 @@ public class User {
         this.userName = userName;
     }
 
-    public String getUserID() {
-        return userID;
-    }
-
     public String getUserName() {
         return userName;
     }
