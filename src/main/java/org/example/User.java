@@ -4,8 +4,8 @@ import java.security.PublicKey;
 import java.util.UUID;
 
 public class User {
-    private String userID;
-    private String userName;
+    private final String userID;
+    private final String userName;
 
     public User(String userName){
         this.userID = UUID.randomUUID().toString();

@@ -5,10 +5,10 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Event {
-    private static HashMap<String, Integer> availableTicketList = new HashMap<>();
-    private String eventName;
-    private List<Ticket> ticket;
-    private double ticketPrice;
+    private static final HashMap<String, Integer> availableTicketList = new HashMap<>();
+    private final String eventName;
+    private final List<Ticket> ticket;
+    private final double ticketPrice;
 
     public Event(String eventName, int ticketStock, double ticketPrice){
         this.eventName = eventName.toUpperCase();
@@ -36,14 +36,17 @@ public class Event {
 
     public static void displayAvailableEvent(){
         System.out.println("Available Events:");
+
+        int numberOrder = 0;
+
         for (String event : availableTicketList.keySet()) {
-            System.out.println(event + " - Tickets available: " + availableTicketList.get(event));
+            numberOrder++;
+            System.out.println(numberOrder + ". "+ event + " - Tickets available: " + availableTicketList.get(event));
         }
     }
 
-    public HashMap<String, Integer> updateStock(int ticketBought){
+    public void updateStock(int ticketBought){
         availableTicketList.put(eventName, availableTicketList.get(eventName) - ticketBought);
-        return availableTicketList;
     }
 
     public Ticket getAvailableTicket() {

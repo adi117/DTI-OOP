@@ -7,9 +7,9 @@ import java.util.Scanner;
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        Event film1 = new Event("Superman", 20, 25000);
-        Event film2 = new Event("Spiderman", 10, 30000);
-        Event film3 = new Event("Batman", 15, 25000);
+        Event film1 = new Event("SuperBowl", 20, 25000);
+        Event film2 = new Event("World Cup", 10, 30000);
+        Event film3 = new Event("F1", 15, 25000);
 
         TicketingApp app = new TicketingApp();
         Scanner scanner = new Scanner(System.in);
@@ -27,14 +27,14 @@ public class Main {
             Event selectedEvent = null;
             while (selectedEvent == null) {
                 try {
-                    System.out.print("Enter the event name: ");
+                    System.out.print("Enter the event name / number: ");
                     eventName = scanner.nextLine().toUpperCase();
 
-                    if (eventName.equalsIgnoreCase("Superman")) {
+                    if (eventName.equalsIgnoreCase("SuperBowl")) {
                         selectedEvent = film1;
-                    } else if (eventName.equalsIgnoreCase("Spiderman")) {
+                    } else if (eventName.equalsIgnoreCase("World Cup")) {
                         selectedEvent = film2;
-                    } else if (eventName.equalsIgnoreCase("Batman")) {
+                    } else if (eventName.equalsIgnoreCase("F1")) {
                         selectedEvent = film3;
                     } else {
                         throw new IllegalArgumentException("Invalid event name. Please try again.");

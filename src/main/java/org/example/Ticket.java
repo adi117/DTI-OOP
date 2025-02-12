@@ -5,9 +5,9 @@ import java.util.UUID;
 
 public class Ticket {
     private final String ticketID;
-    private int seatNumber;
-    private double ticketPrice;
-    private String eventName;
+    private final String eventName;
+    private final int seatNumber;
+    private final double ticketPrice;
     private boolean isTicketBooked;
     private User user;
 
