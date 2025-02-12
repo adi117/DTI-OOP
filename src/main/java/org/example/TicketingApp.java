@@ -14,4 +14,16 @@ public class TicketingApp {
     public void setEventList(List<String> eventList) {
         this.eventList = eventList;
     }
+
+    public void bookTicket(String userName, String eventName){
+
+    }
+
+    public void validateTicket(String tickedID){
+
+    }
+
+    public void confirmTicketBooking(){
+
+    }
 }

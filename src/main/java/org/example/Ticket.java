@@ -1,28 +1,25 @@
 package org.example;
 
 import java.util.List;
+import java.util.UUID;
 
 public class Ticket {
-    private int ticketID;
+    private final String ticketID;
     private int ticketStock;
     private int seatNumber;
     private double ticketPrice;
     private String eventName;
 
-    public Ticket(){}
     public Ticket(String eventName,double ticketPrice, int seatNumber, int ticketStock){
+        this.ticketID = UUID.randomUUID().toString();
         this.eventName = eventName;
         this.ticketPrice = ticketPrice;
         this.ticketStock = ticketStock;
         this.seatNumber = seatNumber;
     }
 
-    public int getTicketID () {
+    public String getTicketID () {
         return ticketID;
-    }
-
-    public void setTicketID(int ticketID) {
-        this.ticketID = ticketID;
     }
 
     public int getTicketStock () {
@@ -34,10 +31,10 @@ public class Ticket {
     }
 
     public double getTicketPrice () {
-        return ticketStock;
+        return ticketPrice;
     }
 
-    public void setTicketPrice(int ticketPrice) {
+    public void setTicketPrice(double ticketPrice) {
         this.ticketPrice = ticketPrice;
     }
 
@@ -55,6 +52,14 @@ public class Ticket {
 
     public void setEventName(String eventName) {
         this.eventName= eventName;
+    }
+
+    public void buyTicket(){
+
+    }
+
+    public void updateTicketStock(){
+
     }
 
 }
