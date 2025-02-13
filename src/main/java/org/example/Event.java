@@ -23,10 +23,6 @@ public class Event {
     }
 
     public boolean checkTicketAvailability(String eventName){
-        if (availableTicketList.get(eventName.toUpperCase()) == null){
-            throw new IllegalArgumentException("There is no such event!");
-        }
-
         if (availableTicketList.get(eventName.toUpperCase()) > 0){
             return true;
         } else {
